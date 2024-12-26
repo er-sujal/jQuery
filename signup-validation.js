@@ -7,7 +7,6 @@ $(document).ready(function () {
     e.preventDefault();
     let isValid = true;
 
-    // Name validation
     if (!$("#name").val().trim()) {
       isValid = false;
       $("#name").addClass("is-invalid");
@@ -15,7 +14,6 @@ $(document).ready(function () {
       $("#name").removeClass("is-invalid");
     }
 
-    // Gender validation
     if (!$('input[name="gender"]:checked').val()) {
       isValid = false;
       $('input[name="gender"]').addClass("is-invalid");
@@ -23,7 +21,6 @@ $(document).ready(function () {
       $('input[name="gender"]').removeClass("is-invalid");
     }
 
-    // DOB validation
     if (!$("#dob").val()) {
       isValid = false;
       $("#dob").addClass("is-invalid");
@@ -31,7 +28,6 @@ $(document).ready(function () {
       $("#dob").removeClass("is-invalid");
     }
 
-    // Country validation
     if (!$("#country").val()) {
       isValid = false;
       $("#country").addClass("is-invalid");
@@ -39,7 +35,6 @@ $(document).ready(function () {
       $("#country").removeClass("is-invalid");
     }
 
-    // Password validation
     if (!passwordRegex.test($("#password").val())) {
       isValid = false;
       $("#password").addClass("is-invalid");
@@ -47,7 +42,6 @@ $(document).ready(function () {
       $("#password").removeClass("is-invalid");
     }
 
-    // Confirm Password validation
     if ($("#password").val() !== $("#confirmPassword").val()) {
       isValid = false;
       $("#confirmPassword").addClass("is-invalid");
